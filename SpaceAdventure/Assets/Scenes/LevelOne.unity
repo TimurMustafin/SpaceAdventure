@@ -1613,7 +1613,7 @@ MonoBehaviour:
       type: 3}
     AmountInPool: 1
     EnemySortKey: EnemyShipThree
-  GeneratorRange: 0700000007000000
+  GeneratorRange: 0a0000000a000000
   RateOfGeneration: 20
 --- !u!4 &1069023595
 Transform:
