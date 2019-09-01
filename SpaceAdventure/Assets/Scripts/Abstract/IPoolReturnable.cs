@@ -1,0 +1,6 @@
+﻿
+
+interface IPoolReturnable
+{
+    void BackToPool();
+}
