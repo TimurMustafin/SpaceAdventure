@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class PlayerRocket : Rocket, IMovable
 {
+    LevelData levelData;
+
+    private void Start()
+    {
+        levelData = GameMaster.Instance.LevelData;
+        Speed = levelData.RocketSpeed;
+        Damage = levelData.RocketDamage;
+        lifeTime = levelData.RocketLifetime;
+    }
+
     private void Update()
     {
         if (OutOfBoundaries() || lifeTime < 0)
@@ -15,27 +25,23 @@ public class PlayerRocket : Rocket, IMovable
         Move(); 
     }
 
-
     public void Move()
     {
         transform.Translate(Vector3.up * Speed * Time.deltaTime, Space.World);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-
+    {     
         DestroyRocket();
     }
 
-     void DestroyRocket()
+    void DestroyRocket()
     {
         GameObject effect = Instantiate(ExplosionEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
 
         Destroy(effect, 0.3f);
     }
-
 
     public void Rotate()
     {

@@ -9,7 +9,15 @@ public class PlayerShip : SpaceShip, IMovable
     public GameObject CrashEffect;
     public Camera mainCamera;
 	float timer;
-    
+    LevelData levelData;
+
+    private void Start()
+    {
+        levelData = GameMaster.Instance.LevelData;
+
+        Speed = levelData.PlayerSpeed;
+        FireRate = levelData.PlayerFirerate;
+    }
 
     void Update()
     {
@@ -18,7 +26,7 @@ public class PlayerShip : SpaceShip, IMovable
 			if (timer < 0)
 			{
 				Shoot();
-				timer = 0.06f;
+				timer = 1/FireRate;
 			}            
 			
         }

@@ -6,16 +6,39 @@ public class EnemyShip : SpaceShip, IMovable, IPoolReturnable
 {
     public int HitPoints;
 
-    public float VibrationAmp;
-    public float VibrationFreq;
-    protected float VibrationPhase;
-
+    float VibrationAmp;
+    float VibrationFreq;
+    
+    LevelData levelData;
    // public AudioSource EnemyShipShoot;
 
 
     private void Start()
     {
-        fireTimer = 1 / fireRate;
+        levelData = GameMaster.Instance.LevelData;
+        switch (IdTag)
+        {
+            case "EnemyShipOne":
+                Speed = levelData.ShipOneSpeed;
+                FireRate = levelData.ShipOneFirerate;
+                VibrationAmp = levelData.ShipOneAmp;
+                VibrationFreq = levelData.ShipOneFreq;
+                break;
+            case "EnemyShipTwo":
+                Speed = levelData.ShipTwoSpeed;
+                FireRate = levelData.ShipTwoFirerate;
+                VibrationAmp = levelData.ShipTwoAmp;
+                VibrationFreq = levelData.ShipTwoFreq;
+                break;
+            case "EnemyShipThree":
+                Speed = levelData.ShipThreeSpeed;
+                FireRate = levelData.ShipThreeFirerate;
+                VibrationAmp = levelData.ShipThreeAmp;
+                VibrationFreq = levelData.ShipThreeFreq;
+                break;
+        }
+
+        fireTimer = 1 / FireRate;
     }
 
 
@@ -27,7 +50,7 @@ public class EnemyShip : SpaceShip, IMovable, IPoolReturnable
         if (fireTimer < 0)
         {
             Shoot();
-            fireTimer = 1 / fireRate;
+            fireTimer = 1 / FireRate;
         }
 
         fireTimer -= Time.deltaTime;

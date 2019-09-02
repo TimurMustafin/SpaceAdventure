@@ -6,7 +6,7 @@ public abstract class SpaceShip : SpaceObject
 {
     public GameObject rocketPrefab;
     public Transform[] FirePoints;
-    public float fireRate;
+    protected float FireRate;
     protected float fireTimer;
 
     protected abstract void Shoot();

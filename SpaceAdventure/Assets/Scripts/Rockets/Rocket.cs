@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rocket : DamagingSpaceObject
 {
-    public float lifeTime;  
+    protected float lifeTime;  
    
 
     

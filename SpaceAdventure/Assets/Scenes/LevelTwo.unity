@@ -384,49 +384,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116779141}
   m_CullTransparentMesh: 0
---- !u!1 &167894072
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 167894074}
-  - component: {fileID: 167894073}
-  m_Layer: 0
-  m_Name: PlayerStats
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &167894073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167894072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b67d9f391ba1465caa61aeb905dab94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &167894074
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167894072}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 253.31473, y: 212.31572, z: -1443.2775}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &306182034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,27 +1550,27 @@ MonoBehaviour:
   EnemyTypeList:
   - EnemyPrefab: {fileID: 8830360322727560415, guid: 3ea3da2bc32e34eb3ab27dd2a16d4f8a,
       type: 3}
-    AmountInPool: 4
+    AmountInPool: 8
     EnemySortKey: AsterSmall
   - EnemyPrefab: {fileID: 2601373690946659303, guid: 0ffb25838ba914527bfde0117a93070f,
       type: 3}
-    AmountInPool: 4
+    AmountInPool: 8
     EnemySortKey: AsterMedium
   - EnemyPrefab: {fileID: 5857716398158298944, guid: 3eaba362e85414c1f8a6903ea34c6640,
       type: 3}
-    AmountInPool: 4
+    AmountInPool: 8
     EnemySortKey: AsterBig
   - EnemyPrefab: {fileID: 4154655088251055916, guid: 0049844742b76450191da0405d346bf5,
       type: 3}
-    AmountInPool: 3
+    AmountInPool: 6
     EnemySortKey: EnemyShipOne
   - EnemyPrefab: {fileID: 8626834092697206623, guid: 52bc8917eee9a4a02ab17d0e803c55ea,
       type: 3}
-    AmountInPool: 3
+    AmountInPool: 6
     EnemySortKey: EnemyShipTwo
   - EnemyPrefab: {fileID: 4590796455180493689, guid: 9a2e46b72c3de45b4bc2283389a27783,
       type: 3}
-    AmountInPool: 3
+    AmountInPool: 6
     EnemySortKey: EnemyShipThree
   GeneratorRange: 0700000007000000
 --- !u!4 &1069023595
@@ -1628,7 +1585,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197380331
 GameObject:
@@ -1905,7 +1862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63c284dd15574048ae4cda03a7b53e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelData: {fileID: 11400000, guid: 580c7136f84f14f3bbfa67fb439afb81, type: 2}
+  LevelData: {fileID: 11400000, guid: f7a45729ab8ed49278fc75c590a7c085, type: 2}
   HeathText: {fileID: 1197380333}
   HealthBar: {fileID: 2144389701}
   HitPointText: {fileID: 306182036}
@@ -2490,7 +2447,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1551828457
 GameObject:
@@ -3657,7 +3614,7 @@ RectTransform:
   - {fileID: 1610376336}
   - {fileID: 1017946258}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3804,7 +3761,7 @@ PrefabInstance:
     - target: {fileID: 7876854790082114582, guid: 5035c9931d0614d96961619e5f5c49b9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7876854790082114582, guid: 5035c9931d0614d96961619e5f5c49b9,
         type: 3}

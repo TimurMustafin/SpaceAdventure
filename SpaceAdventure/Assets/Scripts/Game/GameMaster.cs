@@ -7,6 +7,9 @@ using System;
 
 public class GameMaster : MonoBehaviour
 {
+    [Header("LevelData")]
+    public LevelData LevelData;
+
     [Header("UI")]
     public Text HeathText;
     public Slider HealthBar;
@@ -19,9 +22,7 @@ public class GameMaster : MonoBehaviour
     public GameObject HUD;
 
     
-
-    [Header("Win Condition")]
-    public int PointsToWin;
+    int PointsToWin;
 
     [Header("Sound")]
     public AudioSource ExplosionSound;
@@ -31,7 +32,7 @@ public class GameMaster : MonoBehaviour
 
     [HideInInspector]
     public bool GameStarted;
-
+    
     bool isPaused;
 
     #region Singleton
@@ -45,9 +46,14 @@ public class GameMaster : MonoBehaviour
 
     #endregion
 
+    
 
     private void Start()
     {
+        Time.timeScale = 1f;
+        PointsToWin = LevelData.PointsToWin;
+        PlayerStats.Health = 100;
+        PlayerStats.HitPoints = 0;
         HealthBar.value = PlayerStats.Health;
         HitpointsBar.value = PlayerStats.HitPoints;
         isPaused = false;
@@ -96,14 +102,14 @@ public class GameMaster : MonoBehaviour
 
     }
 
-    void YouWin()
+    public void YouWin()
     {
         YouWinUI.SetActive(true);
         HUD.SetActive(false);
         Time.timeScale = 0.2f;
     }
 
-    void GameOver()
+    public void GameOver()
     {
         
         GameOverUI.SetActive(true);
@@ -113,12 +119,17 @@ public class GameMaster : MonoBehaviour
         
     }
 
-    void Retry()
+    public void Retry()
     {
         PlayerStats.Health = 100;
         PlayerStats.HitPoints = 0;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()

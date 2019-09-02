@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 116779144}
   - component: {fileID: 116779143}
   m_Layer: 5
-  m_Name: NextLevel
+  m_Name: Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1389992390}
-        m_MethodName: NextLevel
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -988,7 +988,7 @@ GameObject:
   - component: {fileID: 817405475}
   - component: {fileID: 817405474}
   m_Layer: 5
-  m_Name: NextLevelText
+  m_Name: RetryText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1046,9 +1046,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'NEXT LEVEL
-
-'
+  m_Text: RETRY
 --- !u!222 &817405475
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1593,27 +1591,27 @@ MonoBehaviour:
   EnemyTypeList:
   - EnemyPrefab: {fileID: 8830360322727560415, guid: 3ea3da2bc32e34eb3ab27dd2a16d4f8a,
       type: 3}
-    AmountInPool: 4
+    AmountInPool: 12
     EnemySortKey: AsterSmall
   - EnemyPrefab: {fileID: 2601373690946659303, guid: 0ffb25838ba914527bfde0117a93070f,
       type: 3}
-    AmountInPool: 4
+    AmountInPool: 12
     EnemySortKey: AsterMedium
   - EnemyPrefab: {fileID: 5857716398158298944, guid: 3eaba362e85414c1f8a6903ea34c6640,
       type: 3}
-    AmountInPool: 4
+    AmountInPool: 12
     EnemySortKey: AsterBig
   - EnemyPrefab: {fileID: 4154655088251055916, guid: 0049844742b76450191da0405d346bf5,
       type: 3}
-    AmountInPool: 3
+    AmountInPool: 8
     EnemySortKey: EnemyShipOne
   - EnemyPrefab: {fileID: 8626834092697206623, guid: 52bc8917eee9a4a02ab17d0e803c55ea,
       type: 3}
-    AmountInPool: 3
+    AmountInPool: 8
     EnemySortKey: EnemyShipTwo
   - EnemyPrefab: {fileID: 4590796455180493689, guid: 9a2e46b72c3de45b4bc2283389a27783,
       type: 3}
-    AmountInPool: 3
+    AmountInPool: 8
     EnemySortKey: EnemyShipThree
   GeneratorRange: 0700000007000000
 --- !u!4 &1069023595
@@ -1905,7 +1903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63c284dd15574048ae4cda03a7b53e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelData: {fileID: 11400000, guid: 580c7136f84f14f3bbfa67fb439afb81, type: 2}
+  LevelData: {fileID: 11400000, guid: bb38732b888f84eb2a058ac1bc6a91af, type: 2}
   HeathText: {fileID: 1197380333}
   HealthBar: {fileID: 2144389701}
   HitPointText: {fileID: 306182036}
