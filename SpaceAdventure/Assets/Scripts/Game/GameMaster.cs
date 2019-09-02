@@ -7,21 +7,25 @@ using System;
 
 public class GameMaster : MonoBehaviour
 {
+    [Header("Game")]
+    public LevelData levelData;
+
     [Header("UI")]
-    public Text HeathText;
+    public Text HealthText;
     public Slider HealthBar;
     public Text HitPointText;
     public Slider HitpointsBar;
 
     public Text CountdownText;
+    public Text LevelText;
     public GameObject GameOverUI;
     public GameObject YouWinUI;
     public GameObject HUD;
 
     
 
-    [Header("Win Condition")]
-    public int PointsToWin;
+    //[Header("Win Condition")]
+    int PointsToWin;
 
     [Header("Sound")]
     public AudioSource ExplosionSound;
@@ -48,8 +52,17 @@ public class GameMaster : MonoBehaviour
 
     private void Start()
     {
+
+        Time.timeScale = 1f;
+        PlayerStats.Health = 100;
+        PlayerStats.HitPoints = 0;
+        HealthText.text = PlayerStats.Health.ToString();
+        HitPointText.text = PlayerStats.HitPoints.ToString();
         HealthBar.value = PlayerStats.Health;
         HitpointsBar.value = PlayerStats.HitPoints;
+
+        PointsToWin = levelData.PointsToWin;
+        
         isPaused = false;
         GameStarted = false;
         
@@ -66,11 +79,9 @@ public class GameMaster : MonoBehaviour
 
     public void UpdateHealth()
     {
-        HeathText.text = PlayerStats.Health.ToString();
+        HealthText.text = PlayerStats.Health.ToString();
         HealthBar.value = PlayerStats.Health;
         //Debug.Log(HealthBar.value);
-
-
     }
 
     public void UpdateHitPoint()
@@ -96,14 +107,14 @@ public class GameMaster : MonoBehaviour
 
     }
 
-    void YouWin()
+    public void YouWin()
     {
         YouWinUI.SetActive(true);
         HUD.SetActive(false);
         Time.timeScale = 0.2f;
     }
 
-    void GameOver()
+    public void GameOver()
     {
         
         GameOverUI.SetActive(true);
@@ -113,12 +124,17 @@ public class GameMaster : MonoBehaviour
         
     }
 
-    void Retry()
+    public void Retry()
     {
         PlayerStats.Health = 100;
         PlayerStats.HitPoints = 0;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
@@ -143,8 +159,14 @@ public class GameMaster : MonoBehaviour
             yield return null;
         }
         CountdownText.enabled = false;
+        LevelText.enabled = false;
         GameStarted = true;
         StartGameSound.Play();
         Soundtrack.Play();
+    }
+
+    public void BackToStartMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

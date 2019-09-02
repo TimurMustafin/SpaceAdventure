@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622cff1200a7e4ffc99e53d5a6eba54c, type: 3}
+  m_Name: Level 2
+  m_EditorClassIdentifier: 
+  GeneratorRate: 30
+  PointsToWin: 1000
+  PlayerSpeed: 25
+  PlayerFirerate: 40
+  Ship1Speed: 14
+  Ship1Firerate: 6
+  Ship1VibrationAmp: 0.1
+  Ship1VibrationFreq: 2
+  Ship1Hitpoints: 20
+  Ship2Speed: 20
+  Ship2Firerate: 5
+  Ship2VibrationAmp: 0.1
+  Ship2VibrationFreq: 2
+  Ship2Hitpoints: 40
+  Ship3Speed: 15
+  Ship3Firerate: 5
+  Ship3VibrationAmp: 0.1
+  Ship3VibrationFreq: 1
+  Ship3Hitpoints: 80
+  AsteroidSmallSpeed: 20
+  AsteroidSmallRotationSpeed: 10
+  AsteroidSmallDamage: 5
+  AsteroidMediumSpeed: 16
+  AsteroidMediumRotationSpeed: 5
+  AsteroidMediumDamage: 15
+  AsteroidBigSpeed: 3
+  AsteroidBigRotationSpeed: 3
+  AsteroidBigDamage: 20
+  RocketSpeed: 40
+  RocketLifetime: 2
+  RocketDamage: 20

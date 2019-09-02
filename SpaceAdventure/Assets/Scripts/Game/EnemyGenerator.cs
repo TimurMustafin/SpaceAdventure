@@ -32,7 +32,7 @@ public class EnemyGenerator : MonoBehaviour
 
     [Header("Generator")]
     public int[] GeneratorRange;
-    public float RateOfGeneration;
+    float RateOfGeneration;
 
     
     
@@ -41,8 +41,8 @@ public class EnemyGenerator : MonoBehaviour
     int EnemyKeysIndex = 0;
 
     private void Start()
-    {    
-
+    {
+        RateOfGeneration = GameMaster.Instance.levelData.GeneratorRate;
         timer = 5 / RateOfGeneration;
 
         EnemyKeys = new string[EnemyTypeList.Count];

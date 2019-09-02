@@ -101,9 +101,9 @@ GameObject:
   - component: {fileID: 4590796455180177443}
   - component: {fileID: 4590796455167792053}
   - component: {fileID: 4590796455189696785}
-  - component: {fileID: 4748846137130400563}
   - component: {fileID: 4938099957092995913}
   - component: {fileID: 1875783402991264683}
+  - component: {fileID: 6232669193959028738}
   m_Layer: 0
   m_Name: EnemyShipThree
   m_TagString: Untagged
@@ -195,32 +195,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4748846137130400563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4590796455180493689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66c4a6c90006f4d059e64e703b82fea2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IdTag: EnemyShipThree
-  Speed: 10
-  RotationSpeed: 0
-  rocketPrefab: {fileID: 8541968952064503116, guid: 9d4fa05931a474d519c1fabd9edb4fbd,
-    type: 3}
-  FirePoints:
-  - {fileID: 1640123029128396796}
-  - {fileID: 1324262580769990946}
-  - {fileID: 8421732586868395181}
-  fireRate: 3
-  HitPoints: 80
-  VibrationAmp: 0.1
-  VibrationFreq: 1
-  EnemyShipShoot: {fileID: 0}
 --- !u!50 &4938099957092995913
 Rigidbody2D:
   serializedVersion: 4
@@ -258,3 +232,22 @@ CircleCollider2D:
   m_Offset: {x: -0.014588267, y: 0.06321576}
   serializedVersion: 2
   m_Radius: 0.38054934
+--- !u!114 &6232669193959028738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590796455180493689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c4a6c90006f4d059e64e703b82fea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdTag: EnemyShipThree
+  rocketPrefab: {fileID: 8541968952064503116, guid: 9d4fa05931a474d519c1fabd9edb4fbd,
+    type: 3}
+  FirePoints:
+  - {fileID: 1640123029128396796}
+  - {fileID: 1324262580769990946}
+  - {fileID: 8421732586868395181}

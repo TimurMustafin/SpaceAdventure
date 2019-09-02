@@ -4,33 +4,59 @@ using UnityEngine;
 
 public class EnemyShip : SpaceShip, IMovable, IPoolReturnable
 {
-    public int HitPoints;
+    protected int HitPoints;
 
-    public float VibrationAmp;
-    public float VibrationFreq;
-    protected float VibrationPhase;
+    protected float VibrationAmp;
+    protected float VibrationFreq;
 
    // public AudioSource EnemyShipShoot;
 
-
     private void Start()
     {
-        fireTimer = 1 / fireRate;
-    }
+        LevelData levelData = GameMaster.Instance.levelData;
 
+       switch(IdTag)
+
+       {
+            case "EnemyShipOne":
+                Speed = levelData.Ship1Speed;
+                FireRate = levelData.Ship1Firerate;
+                VibrationAmp = levelData.Ship1VibrationAmp;
+                VibrationFreq = levelData.Ship1VibrationFreq;
+                HitPoints = levelData.Ship1Hitpoints;
+                break;
+
+            case "EnemyShipTwo":
+                Speed = levelData.Ship2Speed;
+                FireRate = levelData.Ship2Firerate;
+                VibrationAmp = levelData.Ship2VibrationAmp;
+                VibrationFreq = levelData.Ship2VibrationFreq;
+                HitPoints = levelData.Ship2Hitpoints;
+                break;
+            case "EnemyShipThree":
+                Speed = levelData.Ship3Speed;
+                FireRate = levelData.Ship3Firerate;
+                VibrationAmp = levelData.Ship3VibrationAmp;
+                VibrationFreq = levelData.Ship3VibrationFreq;
+                HitPoints = levelData.Ship3Hitpoints;
+                break;
+       }
+
+        FireTimer = 1 / FireRate;
+    }
 
     private void Update()
     {
         if (OutOfBoundaries())
             BackToPool();
 
-        if (fireTimer < 0)
+        if (FireTimer < 0)
         {
             Shoot();
-            fireTimer = 1 / fireRate;
+            FireTimer = 1 / FireRate;
         }
 
-        fireTimer -= Time.deltaTime;
+        FireTimer -= Time.deltaTime;
 
         Move();
         VIbration();
@@ -76,9 +102,5 @@ public class EnemyShip : SpaceShip, IMovable, IPoolReturnable
     {
         //
     }
-
-
-
-    
 
 }

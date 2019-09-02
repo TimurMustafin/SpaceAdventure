@@ -5,14 +5,10 @@ using UnityEngine;
 public  class SpaceObject : MonoBehaviour
 { 
     public string IdTag;
-    public float Speed;
-    public float RotationSpeed;
+    protected float Speed;
+    protected float RotationSpeed;
     
-    protected float[] Boundaries = {-10, 10, -10, 40};
-
-   
-
-    
+    protected float[] Boundaries = {-16, 16, -10, 30};
 
     protected bool OutOfBoundaries()
     {

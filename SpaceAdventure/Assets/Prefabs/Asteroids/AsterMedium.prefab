@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8064041344850206993}
   - component: {fileID: 5535146190097664942}
-  - component: {fileID: 3107318300796167555}
   - component: {fileID: 3978838628625588691}
   - component: {fileID: 4991625674577513358}
+  - component: {fileID: 4647512215187837647}
   m_Layer: 0
   m_Name: AsterMedium
   m_TagString: Untagged
@@ -82,23 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3107318300796167555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2601373690946659303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79fe0fa2fd70d47089566becb70ede0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IdTag: AsterMedium
-  Speed: 6
-  RotationSpeed: 5
-  ExplosionEffect: {fileID: 0}
-  Damage: 10
 --- !u!50 &3978838628625588691
 Rigidbody2D:
   serializedVersion: 4
@@ -136,3 +119,17 @@ CircleCollider2D:
   m_Offset: {x: -0.012722492, y: 0}
   serializedVersion: 2
   m_Radius: 0.64088964
+--- !u!114 &4647512215187837647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601373690946659303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fe0fa2fd70d47089566becb70ede0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdTag: AsterMedium
+  ExplosionEffect: {fileID: 0}

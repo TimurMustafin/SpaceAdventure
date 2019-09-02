@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3716161185040312201}
   - component: {fileID: 1544743510620580634}
-  - component: {fileID: 8902320773882162300}
   - component: {fileID: 3518624787825060992}
   - component: {fileID: 7151442877278601024}
+  - component: {fileID: 887714328286632607}
   m_Layer: 0
   m_Name: AsterSmall
   m_TagString: Untagged
@@ -82,23 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8902320773882162300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8830360322727560415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79fe0fa2fd70d47089566becb70ede0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IdTag: AsterSmall
-  Speed: 7
-  RotationSpeed: 10
-  ExplosionEffect: {fileID: 0}
-  Damage: 5
 --- !u!58 &3518624787825060992
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -136,3 +119,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &887714328286632607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8830360322727560415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fe0fa2fd70d47089566becb70ede0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdTag: AsterSmall
+  ExplosionEffect: {fileID: 0}

@@ -5,7 +5,31 @@ using UnityEngine;
 
 public class Asteroid : DamagingSpaceObject, IMovable, IPoolReturnable
 {
-    
+    private void Start()
+    {
+        LevelData levelData = GameMaster.Instance.levelData;
+        switch (IdTag)
+        {
+            case "AsterSmall":
+                Speed = levelData.AsteroidSmallSpeed;
+                RotationSpeed = levelData.AsteroidSmallRotationSpeed;
+                Damage = levelData.AsteroidSmallDamage;
+                break;
+            case "AsterMedium":
+                Speed = levelData.AsteroidMediumSpeed;
+                RotationSpeed = levelData.AsteroidMediumRotationSpeed;
+                Damage = levelData.AsteroidMediumDamage;
+                break;
+            case "AsterBig":
+                Speed = levelData.AsteroidBigSpeed;
+                RotationSpeed = levelData.AsteroidBigRotationSpeed;
+                Damage = levelData.AsteroidBigDamage;
+                break;
+            default:
+                break;
+        }
+
+    }
 
     private void Update()
     {

@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class EnemyRocket : Rocket, IMovable
 {
+    private void Start()
+    {
+        LevelData levelData = GameMaster.Instance.levelData;
+        Speed = levelData.RocketSpeed;
+        LifeTime = levelData.RocketLifetime;
+        Damage = levelData.RocketDamage;
+    }
+
     void Update()
     {
-        if (OutOfBoundaries() || lifeTime < 0)
+        if (OutOfBoundaries() || LifeTime < 0)
         {
             DestroyRocket();
         }
 
-        lifeTime -= Time.deltaTime;
+        LifeTime -= Time.deltaTime;
 
         //Move();
         transform.Translate(Vector3.down * Speed * Time.deltaTime, Space.Self);
     }
-
 
     public void Move()
     {

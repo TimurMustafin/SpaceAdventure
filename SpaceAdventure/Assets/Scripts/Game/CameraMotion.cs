@@ -22,6 +22,14 @@ public class CameraMotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.touchCount == 2)
+        {
+            Touch touch = Input.GetTouch(0);
+            GameCamera.orthographicSize += touch.deltaPosition.y / 5;
+            GameCamera.orthographicSize = Mathf.Clamp(GameCamera.orthographicSize, 7, 12);
+            return;
+        }
+
         GameCamera.orthographicSize -= Input.GetAxis("Vertical") * CameraDamp;
         GameCamera.orthographicSize = Mathf.Clamp(GameCamera.orthographicSize, 7, 12);
         
