@@ -22,7 +22,7 @@ public class PlayerShip : SpaceShip, IMovable
     void Update()
     {
         //Mobile
-        /*Touch[] touches = Input.touches;
+        Touch[] touches = Input.touches;
         if (Input.touchCount == 1)
         {
             if (touches[0].position.x < Screen.width)
@@ -40,10 +40,10 @@ public class PlayerShip : SpaceShip, IMovable
                 Shoot();
                 timer = 1 / FireRate;
             }
-        }*/
+        }
 
         // Desktop
-        if (Input.GetKey(KeyCode.Space))
+       /* if (Input.GetKey(KeyCode.Space))
         {
 			if (timer < 0)
 			{
@@ -53,7 +53,7 @@ public class PlayerShip : SpaceShip, IMovable
         }
 		timer -= Time.deltaTime;       
 
-        Move(); 
+        Move(); */
     }
 
     public void Move()
